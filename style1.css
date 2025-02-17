@@ -4,7 +4,7 @@
 }
 
 body {
-    background-image: linear-gradient(to left,#9d9ad9,#6b9bd1);
+    background-image: radial-gradient(#ffffff,#405d5f);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -12,7 +12,7 @@ body {
 }
 
 nav {
-    background-color: #c1daef;
+    background-color: #cfd0d2;
     justify-content: space-between;
     display: flex;
 }
@@ -24,12 +24,18 @@ nav ul{
     list-style-type: none;
 }
 
+@keyframes fade {
+    0% {opacity: 0; transform: translateX(-30%);}
+    100% {opacity: 1; transform: translateX(0);}
+}
+
 nav div p{
     font-weight: 650;
     font-family: Arial, Helvetica, sans-serif;
     padding: 5px;
     margin: 5px;
     font-size: 18px;
+    animation: fade 1s ease-in-out;
 }
 
 nav ul li a{
@@ -43,18 +49,30 @@ nav ul li a{
 }
 
 nav ul li:hover {
-    background-color: #dfe1e4;
+    background-color: #b9b9bb;
     transition: .3 ease-in-out;
     transition-delay: 0.2s;
     border-radius: 7px;
     border-bottom: 1px solid#000000;
 }
 
+marquee {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
 /* CONTENT ABOUT */
+
+@keyframes fadeIn {
+    0% {opacity: 0; transform: translateY(-30%);}
+    100% {opacity: 1; transform: translateY(0);}
+}
+
 .content-about {
-    margin-top: 18px;
+    margin-top: 150px;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    animation: fadeIn 1s ease-in-out;
 }     
 
 h1 {
@@ -69,5 +87,4 @@ footer{
     margin-top: auto;
     text-align: center;
     padding: 5px;
-    background:  #c1daef;
 }
