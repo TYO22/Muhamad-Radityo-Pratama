@@ -69,6 +69,8 @@ nav ul li:hover {
 
 /* CONTENT TUGAS */
 
+/* [Kode CSS sebelumnya tetap sama] */
+
 /* Time Picker Card Styles */
 .timepicker-card {
     text-align: center;
@@ -91,18 +93,65 @@ nav ul li:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 1.5rem 0;
 }
 
-.image-container img {
+.image-wrapper {
+    max-width: 800px;
+    width: 100%;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.image-wrapper:hover {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.image-wrapper img {
     max-width: 100%;
     height: auto;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
     transition: transform 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.image-container img:hover {
-    transform: scale(1.03);
+.image-wrapper img:hover {
+    transform: scale(1.02);
+}
+
+/* [Kode CSS lainnya tetap sama] */
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+    .image-wrapper {
+        max-width: 90%;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .image-wrapper {
+        max-width: 100%;
+        padding: 8px;
+    }
+    
+    .timepicker-card {
+        padding: 1.5rem;
+    }
+    
+    .timepicker-card h2 {
+        font-size: 1.5rem;
+    }
+    
+    .timepicker-card p {
+        font-size: 0.9rem;
+    }
 }
 
 /* Glass Card Styles */
