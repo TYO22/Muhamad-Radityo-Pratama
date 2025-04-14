@@ -113,7 +113,7 @@ nav ul li:hover {
 
 .image-wrapper img {
     max-width: 100%;
-    height: auto;
+    height: 100px;
     border-radius: 8px;
     display: block;
     margin: 0 auto;
