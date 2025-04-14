@@ -69,6 +69,42 @@ nav ul li:hover {
 
 /* CONTENT TUGAS */
 
+/* Time Picker Card Styles */
+.timepicker-card {
+    text-align: center;
+    padding: 2rem;
+}
+
+.timepicker-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.timepicker-card p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: #2f2f2f;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.image-container img:hover {
+    transform: scale(1.03);
+}
+
 /* Glass Card Styles */
 .glass-card {
     background: rgba(255, 255, 255, 0.1);
