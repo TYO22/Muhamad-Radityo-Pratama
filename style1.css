@@ -57,104 +57,24 @@ nav ul li a {
 }
 
 nav ul li a.active {
-    background-color: #3498db;
-    color: white;
+    background-color: #bed6e5;
+    color: rgb(0, 0, 0);
 }
 
-nav ul li:hover {
-    background-color: #7c8da080;
+nav ul li a:hover {
+    background-color: #1a273680;
     transition: .3s ease-in-out;
     border-radius: 4px;
 }
 
 /* CONTENT TUGAS */
-
-/* [Kode CSS sebelumnya tetap sama] */
-
-/* Time Picker Card Styles */
-.timepicker-card {
-    text-align: center;
-    padding: 2rem;
-}
-
-.timepicker-card h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: #2c3e50;
-}
-
-.timepicker-card p {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-    color: #2f2f2f;
-}
-
-.image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 1.5rem 0;
-}
-
-.image-wrapper {
-    max-width: 800px;
-    width: 100%;
-    padding: 15px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
-
-.image-wrapper:hover {
-    background: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-}
-
-.image-wrapper img {
-    max-width: 100%;
-    height: 100px;
-    border-radius: 8px;
-    display: block;
-    margin: 0 auto;
-    transition: transform 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.image-wrapper img:hover {
-    transform: scale(1.02);
-}
-
-/* [Kode CSS lainnya tetap sama] */
-
-/* Responsive Adjustments */
-@media (max-width: 900px) {
-    .image-wrapper {
-        max-width: 90%;
-        padding: 10px;
-    }
-}
-
-@media (max-width: 600px) {
-    .image-wrapper {
-        max-width: 100%;
-        padding: 8px;
-    }
-    
-    .timepicker-card {
-        padding: 1.5rem;
-    }
-    
-    .timepicker-card h2 {
-        font-size: 1.5rem;
-    }
-    
-    .timepicker-card p {
-        font-size: 0.9rem;
-    }
-}
+/* Existing styles remain the same until .glass-card */
 
 /* Glass Card Styles */
+
+.hero-text{
+    text-align: center;
+}
 .glass-card {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
@@ -165,6 +85,7 @@ nav ul li:hover {
     padding: 2rem;
     transition: all 0.3s ease;
     margin-bottom: 2rem;
+    color: #333;
 }
 
 .glass-card:hover {
@@ -172,88 +93,135 @@ nav ul li:hover {
     box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.3);
 }
 
-/* Report Link Styles */
-.pdf-container.glass-card a {
+.glass-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #344c5c;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.glass-card h2 i {
+    color: #3498db;
+}
+
+/* Content Grid Styles */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.content-item {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.content-item:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-3px);
+}
+
+.content-item h3 {
+    color: #344c5c;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.content-item p {
+    color: #45484d;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Video Grid Styles */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.video-item {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.video-item:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-3px);
+}
+
+.video-item h3 {
+    color: #344c5c;
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.pdf-container a {
     display: flex;
     align-items: center;
     justify-content: space-between;
     text-decoration: none;
     color: #f8fafc;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 500;
-    padding: 1.5rem;
-    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
     background: linear-gradient(90deg, rgb(129, 138, 147) 0%, rgb(117, 138, 159) 100%);
     transition: all 0.3s ease;
 }
 
-.pdf-container.glass-card a:hover {
+.pdf-container a:hover {
     background: linear-gradient(90deg, rgb(117, 138, 159) 0%, rgb(129, 138, 147) 100%);
     transform: translateY(-2px);
 }
 
-.pdf-container.glass-card a::after {
-    content: '\f061';
-    font-family: 'Font Awesome 6 Free';
-    font-weight: 900;
-    margin-left: 1rem;
-    transition: all 0.3s ease;
-}
-
-.pdf-container.glass-card a:hover::after {
-    transform: translateX(5px);
-}
-
-/* Hero Section Styles */
-.hero-section {
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.gradient-text {
-    background: linear-gradient(90deg, #323335 0%, #2f2f35 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-}
-
-.subtitle {
-    color: #45484d;
-    font-size: 1.2rem;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-/* Section Spacing */
-.pdf-section {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
+.pdf-container a i {
+    margin-left: 0.5rem;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-    .gradient-text {
-        font-size: 2rem;
+    .content-grid {
+        grid-template-columns: 1fr;
     }
     
-    .subtitle {
-        font-size: 1rem;
+    .video-grid {
+        grid-template-columns: 1fr;
     }
     
-    .pdf-container.glass-card a {
-        font-size: 1rem;
-        padding: 1rem;
+    .glass-card h2 {
+        font-size: 1.5rem;
     }
     
-    .pdf-section {
-        padding: 0 1rem;
+    .content-item h3, .video-item h3 {
+        font-size: 1.1rem;
     }
 }
 
+/* Rest of your existing CSS remains the same */
 /* FOOTER */
 footer {
     margin-top: auto;
